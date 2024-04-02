@@ -1,0 +1,155 @@
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    var(--mainColor),
+    var(--secondaryColor),
+    var(--mainColor)
+  );
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: var(--maxWidth);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+/*🌍 Planets */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.heroPlanetContainer {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -40vw;
+  right: -30%;
+  transform: skewY(-20deg);
+  padding: 4vw;
+}
+
+.heroPlanetSpinner {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  animation: rotate 25s linear infinite;
+}
+
+.heroPlanetRing {
+  border: 0px solid var(--mainColor);
+  border-top-width: 1px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+  opacity: 75%;
+}
+
+.heroPlanet {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  transform: skewY(20deg);
+  border: 0px solid var(--mainColor);
+  border-top-width: 2px;
+  background-color: var(--dark);
+  background-image: repeating-radial-gradient(
+    ellipse farthest-corner at 100% 0%,
+    var(--dark) 0,
+    var(--dark2) 4%
+  );
+  box-shadow: inset 0 0 20rem 10rem var(--dark),
+    0 -2rem 5rem 2rem rgba(var(--mainColorVal), 0.15);
+}
+
+/*🌕 Moon */
+.heroMoon {
+  width: 5px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  z-index: 5;
+  background-color: var(--mainColor);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*📌 Moon location */
+.moon1 {
+  top: 45%;
+  left: 0;
+}
+.moon2 {
+  top: 14.5%;
+  left: 14.5%;
+}
+
+.moon3 {
+  top: 0;
+  left: 45%;
+}
+
+.moon4 {
+  top: 95%;
+  left: 45%;
+}
+
+.moon5 {
+  top: 66%;
+  left: 95%;
+}
+
+/*📐 Moon size */
+.moonSmall {
+  scale: 0.7;
+}
+
+.moonNormal {
+  scale: 1;
+}
+
+.moonBig {
+  scale: 1.3;
+}
