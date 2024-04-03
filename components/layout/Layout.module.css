@@ -5,9 +5,26 @@
   padding: 0.7rem 1rem;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0.3rem 1.2rem 0.2rem rgba(var(--mainColorVal), 0.7);
+  transition: transform 0.3s;
+}
+
+.button svg {
+  width: 1rem;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
 }

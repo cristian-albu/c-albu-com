@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 
 const SkillsSection = () => {
-  return <div>SkillsSection</div>;
+  const ref = useRef(null);
+
+  return <div ref={ref}>SkillsSection</div>;
 };
 
 export default SkillsSection;

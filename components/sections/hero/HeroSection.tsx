@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
 import Button from "@/components/layout/button/Button";
+import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/solid";
 
 const heroData = {
   preTitle: "Hello there. I'm Cristian",
-  title: "Full stack developer focused on bespoke web applications space",
+  title: "Full stack developer focused on the bespoke web applications space.",
   subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   cta: "Let's talk",
 };
@@ -46,7 +47,10 @@ const HeroSection = () => {
           <span>{heroData.preTitle}</span>
           <h1>{heroData.title}</h1>
           <p>{heroData.subtitle}</p>
-          <Button>{heroData.cta}</Button>
+          <Button>
+            <ChatBubbleLeftRightIcon />
+            {heroData.cta}
+          </Button>
         </div>
       </div>
     </section>

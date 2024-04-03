@@ -1,26 +1,8 @@
-import {
-  AboutSection,
-  ArticlesSection,
-  ContactSection,
-  HeroSection,
-  ProjectsSection,
-  SkillsSection,
-  TestimonialsSection,
-} from "@/components/sections";
+import HomeView from "@/components/views/HomeView";
 import React from "react";
 
 const HomePage = () => {
-  return (
-    <>
-      <HeroSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <TestimonialsSection />
-      <ArticlesSection />
-      <AboutSection />
-      <ContactSection />
-    </>
-  );
+  return <HomeView />;
 };
 
 export default HomePage;
